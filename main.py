@@ -33,6 +33,7 @@
 from functools import reduce
 import numpy as np
 import operator
+from typing import List, Tuple
 
 NUM_GRID = np.array(
     list(map(
@@ -63,16 +64,20 @@ NUM_GRID = np.array(
 )
 
 
-def main(n):
+def main(n: int) -> Tuple[List[int], int]:
     """
     Returns the sequence of `n` adjacent numbers in the grid
-      which have the largest product, as well as the product itself.
+      which have the largest product,
+      as well as the product itself.
 
     Args:
         n (int): Natural number
 
     Returns:
-        `n`-seq of grid numbers having the largest product, and the product.
+        (Tuple[List[int], int]):
+            Tuple of ...
+              * `n`-seq of adjacent numbers in grid having the largest product
+              * Product of those numbers
 
     Raises:
         AssertError: if incorrect params are given
